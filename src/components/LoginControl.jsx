@@ -26,8 +26,9 @@ export default class LoginControl extends Component {
             button = <LoginButton onClick={this.handleLoginClick} />;
         }
         return (
-            <div>
+            <div className="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
                 <Greeting isLoggedIn={isLoggedIn} />
+                <h1>You are <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.</h1>
                 {button}
             </div>
         );
